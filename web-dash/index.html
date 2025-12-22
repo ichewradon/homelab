@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>ichewradon's homelab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="/favicons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="homelab" />
+  <link rel="manifest" href="/favicons/site.webmanifest" />
+</head>
+
+<body>
+
+<div class="grid">
+  <div class="item item-1">
+    <img src="/images/logos/fulllogo.svg" style="height: 5cqw;">
+    <div class="social-links">
+        <a href="https://github.com/ichewradon/homelab" target="_blank" style="text-decoration: none;">
+          <img src="/images/logos/github.svg" style="width: 30px; height: 30px;">
+        </a>
+        <a href="https://ichewradon.com" target="_blank" style="text-decoration: none;">
+          <i data-lucide="link"></i>
+        </a>
+    </div>
+</div>
+
+  <div class="item item-2"><div class="sub-title">Temps</div></div>
+
+  <div class="item item-3" onclick="location.href='http://raspberry.local'" style="filter: invert(21%) sepia(100%) saturate(7491%) hue-rotate(0deg) brightness(100%) contrast(104%);">
+    <img src="/images/rpi4b.svg" style="width: 35%;">
+    <div>
+        <div class="title">
+            Raspberry Pi 4B
+        </div>
+        <div class="description">
+            raspberry.local
+        </div>
+        <div class="description">
+            127.0.0.1
+        </div>
+        <img src="images/qr-codes/exampleqr.svg" style="width: 150px; position: absolute; bottom: 15px; right: 15px;"/>
+    </div>
+  </div>
+
+  <div class="item item-4" style="filter: grayscale(100%);">
+    <img src="/images/rpi4b.svg" style="width: 35%;">
+    <div>
+        <div class="title">
+            Raspberry Pi 3B+
+        </div>
+        <div class="description">
+            raspberry.local
+        </div>
+        <div class="description">
+            127.0.0.1
+        </div>
+        <img src="images/qr-codes/exampleqr.svg" style="width: 150px; position: absolute; bottom: 15px; right: 15px;"/>
+    </div>
+  </div>
+
+  <div class="item item-5" style="filter: hue-rotate(-35deg) saturate(130%) brightness(95%);">
+    <div class="sub-title" style="position: absolute; top: 20px; left: 20px;">
+      Uptime
+    </div>
+    <div class="uptime-value" style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%;">
+      <div class="sub-title" id="uptime">3d 4h 27m</div>
+    </div>
+  </div>
+
+  <div class="item item-6"><div class="sub-title">CPU Load</div></div>
+
+</div>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons({attrs: {'stroke-width': 2}});
+</script>
+
+</body>
+</html>
