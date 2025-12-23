@@ -1,5 +1,5 @@
-@font-face { font-family: Circular; src: url('/fonts/Medium.woff2'); } 
-@font-face { font-family: Circular; font-weight: bold; src: url('/fonts/Bold.woff2');}
+@font-face { font-family: Circular; src: url('fonts/Medium.woff2'); } 
+@font-face { font-family: Circular; font-weight: bold; src: url('fonts/Bold.woff2');}
 
 html, body {
   background-color: #161616;
