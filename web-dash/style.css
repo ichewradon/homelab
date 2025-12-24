@@ -141,11 +141,7 @@ html, body {
 .status.unknown { background: #9ca3af; color: #9ca3af;}
 
 /* Optional pulse for online */
-.status.online {
-  animation: pulse 2s infinite;
-}
-
-.status.status.offline {
+.status {
   animation: pulse 2s infinite;
 }
 
