@@ -17,7 +17,7 @@
 <body>
 
 <div class="grid">
-  <div class="item item-1">
+  <div class="item item-1" onClick="window.location.href=window.location.href">
     <img src="images/logos/fulllogo.svg" style="height: 5cqw;">
     <div class="social-links">
         <a href="https://github.com/ichewradon/homelab" target="_blank" style="text-decoration: none;">
@@ -31,10 +31,15 @@
 
   <div class="item item-2">
     <div class="sub-title">TL-SG105S</div>
-    <img src="images/TL-SG105S.svg" style="width: 35%;">
+    <div class="connections">
+      <div class="connections" id="port1">Port 1 <span class="status online" title="Server Online"></span></div>
+      <div class="connections" id="port2">Port 2 <span class="status online" title="Server Online"></span></div>
+      <div class="connections" id="port3">Port 3 <span class="status online" title="Server Online"></span></div>
+      <div class="connections" id="port4">Port 4 <span class="status offline" title="Server Offline"></span></div>
+    </div>
   </div>
 
-  <div class="item item-3" onclick="location.href='http://raspberry.local'" style="filter: invert(21%) sepia(100%) saturate(7491%) hue-rotate(0deg) brightness(100%) contrast(104%);">
+  <div class="item item-3" onclick="location.href='devices/rpi4b'" style="filter: invert(21%) sepia(100%) saturate(7491%) hue-rotate(0deg) brightness(100%) contrast(104%);">
     <img src="images/rpi4b.svg" style="width: 35%;">
     <div>
         <div class="title">
@@ -66,16 +71,16 @@
     </div>
   </div>
 
-  <div class="item item-5" style="filter: hue-rotate(-35deg) saturate(130%) brightness(95%);">
-    <div class="sub-title" style="position: absolute; top: 20px; left: 20px;">
+  <div class="item item-5">
+    <div class="sub-title">
       Uptime
     </div>
-    <div class="uptime-value" style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%;">
+    <div class="uptime-value">
       <div class="sub-title" id="uptime">3d 4h 27m</div>
     </div>
   </div>
 
-  <div class="item item-6"><div class="sub-title">CPU Load</div></div>
+  <div class="item item-6"><div class="sub-title">Avg Temp</div></div>
 
 </div>
 
@@ -86,3 +91,4 @@
 
 </body>
 </html>
+
