@@ -1,6 +1,6 @@
-async function updateStats(params) {
+async function updateStats() {
     const controller = new AbortController();
-    const timeout = setTimeout(() => contreoller.abort(), 3000);
+    const timeout = setTimeout(() => controller.abort(), 3000);
 
     try {
         const response = await fetch(
@@ -18,8 +18,8 @@ async function updateStats(params) {
         document.getElementById('dash-temp').textContent =
             local.temp != null ? local.temp.toFixed(1) : '--';
 
-        document.getElementById('dash-uptime')
-        local.uptime != null ? formatUptime(local.uptime) : '--';
+        document.getElementById('dash-uptime').textContent =
+            local.uptime != null ? formatUptime(local.uptime) : '--';
 
         document.getElementById('node-temp').textContent =
             remote.temp != null ? remote.temp.toFixed(1) : '--';
@@ -27,16 +27,16 @@ async function updateStats(params) {
         document.getElementById('node-uptime').textContent =
             remote.uptime != null ? formatUptime(remote.uptime) : '--';
 
-
         const temps = [local.temp, remote.temp].filter(t => t != null);
         document.getElementById('homelab-temp').textContent =
             temps.length ? (temps.reduce((a, b) => a + b, 0) / temps.length).toFixed(1) : '--';
 
         const uptimes = [local.uptime, remote.uptime].filter(u => u != null);
         document.getElementById('homelab-uptime').textContent =
-            uptimes.length ? formatUptime(Math.min(...uptimes)) : '--';
+            uptimes.length ? formatUptime(Math.max(...uptimes)) : '--';
+
     } catch (err) {
-        console.error('Failed to update stats:', err);
+        console.error('Failed to fetch stats:', err);
 
         [
             'dash-temp',
@@ -58,7 +58,7 @@ function formatUptime(seconds) {
     const d = Math.floor(seconds / 86400);
     const h = Math.floor((seconds % 86400) / 3600);
     const m = Math.floor((seconds % 3600) / 60);
-    return `${d}d ${h}h ${m}m`;
+    return `${d} d ${h} h ${m} m`;
 }
 
 updateStats();
