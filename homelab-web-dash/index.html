@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ichewradon's homelab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicons/favicon.svg" />
+    <link rel="shortcut icon" href="favicons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="homelab" />
+    <link rel="manifest" href="favicons/site.webmanifest" />
+</head>
+
+<body>
+
+    <div class="grid">
+        <div class="item item-1" onClick="window.location.href=window.location.href">
+            <img src="images/logos/fulllogo.svg" style="height: 5cqw;">
+            <div class="social-links">
+                <a href="https://github.com/ichewradon/homelab" target="_blank" style="text-decoration: none;">
+                    <img src="images/logos/github.svg" style="width: 30px; height: 30px;">
+                </a>
+                <a href="https://ichewradon.com" target="_blank" style="text-decoration: none;">
+                    <i data-lucide="link"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="item item-2">
+            <div class="sub-title">TL-SG105S</div>
+            <div class="connections">
+                <div class="connections" id="port1">Port 1 <status-indicator positive pulse></status-indicator></div>
+                <div class="connections" id="port2">Port 2 <status-indicator positive pulse></status-indicator></div>
+                <div class="connections" id="port3">Port 3 <status-indicator></status-indicator></div>
+                <div class="connections" id="port4">Port 4 <status-indicator></status-indicator></div>
+            </div>
+        </div>
+
+        <div class="item item-3">
+            <img src="images/rpi4b.svg" style="width: 35%;">
+            <div>
+                <div class="title">
+                    Raspberry Pi 4B
+                </div>
+                <div class="description">
+                    homelab4b.local
+                </div>
+                <div class="description">
+                    192.168.68.55
+                </div>
+                <div class="description">
+                    <p>Temp: <span id="node-temp">--</span> °C</p>
+                    <p>Uptime: <span id="node-uptime">--</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="item item-4">
+            <img src="images/rpi4b.svg" style="width: 35%;">
+            <div>
+                <div class="title">
+                    Raspberry Pi 3B+
+                </div>
+                <div class="description">
+                    homelab3bplus.local
+                </div>
+                <div class="description">
+                    192.168.68.100
+                </div>
+                <div class="description">
+                    <p>Temp: <span id="dash-temp">--</span> °C</p>
+                    <p>Uptime: <span id="dash-uptime">--</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="item item-5">
+            <div class="sub-title">
+                Uptime
+            </div>
+            <div class="sub-title">
+                <span id="homelab-uptime">-- d -- h -- m</span>
+            </div>
+        </div>
+
+        <div class="item item-6">
+            <div class="sub-title">
+                Avg Temp
+            </div>
+            <div class="sub-title">
+                <span id="homelab-temp">--</span> °C
+            </div>
+        </div>
+
+    </div>
+
+    <script src="updateStats.js"></script>
+
+</body>
+
+</html>
