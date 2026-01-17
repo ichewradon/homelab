@@ -10,9 +10,10 @@ CORS(
     resources={
         r"/stats": {
             "origins": [
-                "http://192.168.68.100",                    # LAN Access
-                "https://homelab.purpledogprints.co.uk",    # Public Access
-                "http://localhost:5000"                     # Localhost Access
+                "http://192.168.68.100",                                 # LAN Access
+                "https://homelab.purpledogprints.co.uk",                 # Public Access
+                "http://localhost:5000",                                 # Localhost Access
+                "https://ichewradon.github.io/homelab/homelab-web-dash"  # Github Pages
             ]
         }
     }
