@@ -45,7 +45,7 @@ def read_local_uptime():
 def poll_stats():
     while True:
         latest["local"] = {
-            "cpu_temp": read_local_temps(),
+            "temp": read_local_temps(),
             "uptime": read_local_uptime()
         }
         
