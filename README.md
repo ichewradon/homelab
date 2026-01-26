@@ -27,7 +27,7 @@ A compact homelab with 2 Raspberry Pis, a TP-Link TL-SG105S switch, and a custom
 ### Raspberry Pi 4B (2GB)
 - Samba NAS
   - 8TB HDD (permanent storage)
-  - 256GB SSD (removable)
+  - 100GB HDD (removable)
 
 ### TP-Link TL-SG105S
 - Network switch connecting everything
