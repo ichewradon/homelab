@@ -14,7 +14,7 @@ A compact homelab with 2 Raspberry Pis, a TP-Link TL-SG105S switch, and a custom
 | Device                | RAM   | Storage                                | Role                                |
 |-----------------------|-------|----------------------------------------|-------------------------------------|
 | Raspberry Pi 3B+      | 1GB   | 32GB SD Card                           | Web dashboard & GPIO display        |
-| Raspberry Pi 4B       | 2GB   | 8TB HDD, 256GB SSD, 32GB SD Card       | Main homelab processes, NAS         |
+| Raspberry Pi 4B       | 2GB   | 8TB HDD, 100GB HDD, 32GB SD Card       | Main homelab processes, NAS         |
 | TP-Link TL-SG105S     | N/A   | N/A                                    | Network switch (Cat6 Ethernet)      |
 
 ## Services Running
